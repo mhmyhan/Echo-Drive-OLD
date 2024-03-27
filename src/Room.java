@@ -5,10 +5,13 @@ public class Room {
     // Class Variables:
 
     /**
-     * defines the level and by extention the effectiveness of the room between 1 - 5
+     * defines the level of and by extension the effectiveness of the room's function between 1 - 5
      */
-    int level;
-    float fragility;
+    protected int level;
+    /**
+     * Multiplier for damage dealt to the room
+     */
+    private float fragility;
 
     // Constructors:
 
@@ -39,9 +42,15 @@ public class Room {
      * Increases the level of the room by 1
      */
     protected void levelUp() {
-
         level++;
+    }
 
+    /**
+     *
+     * @param levels how many levels to be increased by
+     */
+    public void levelUp(int levels) {
+        level += levels;
     }
 
 }
