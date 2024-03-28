@@ -5,11 +5,6 @@ public class Room {
     // Class Variables:
 
     /**
-     * The Maximum level available for the room to be upgraded to
-     * only accessible to specialist room types.
-     */
-    protected int maxLevel;
-    /**
      * defines the level of and by extension the effectiveness of the room's function between 1 - 5
      */
     protected int level;
@@ -17,10 +12,6 @@ public class Room {
      * Multiplier for damage dealt to the room
      */
     private float fragility;
-    /**
-     * boolean displaying whether
-     */
-    private boolean upgradable;
 
     // Constructors:
 
@@ -29,10 +20,8 @@ public class Room {
      */
     protected Room() {
 
-        this.maxLevel = 5;
         this.level = 1;
         this.fragility = 1.00f;
-        this.upgradable = false;
 
     }
 
@@ -53,12 +42,9 @@ public class Room {
      * Increases the level of the room by 1
      */
     protected void levelUp() {
-        if (level++ > maxLevel) {
-            level = maxLevel;
-        } else {
-            level++;
-        }
+        level++;
     }
+
     /**
      *
      * @param levels how many levels to be increased by

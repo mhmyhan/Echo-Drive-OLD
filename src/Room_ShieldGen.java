@@ -29,5 +29,17 @@ public class Room_ShieldGen extends Room {
 
     // Methods:
 
+    /**
+     *
+     */
+    @Override
+    protected void levelUp() {
+        if (super.level++ > maxLevel) {
+            level = maxLevel;
+        } else {
+            level++;
+        }
+
+    }
 
 }
